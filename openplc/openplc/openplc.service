@@ -1,0 +1,12 @@
+[Unit]
+Description=OpenPLC Runtime
+After=network.target
+
+[Service]
+WorkingDirectory=/home/username/OpenPLC_v3/webserver
+ExecStart=/home/username/OpenPLC_v3/venv/bin/python3 openplc.py
+Restart=always
+User=username
+
+[Install]
+WantedBy=multi-user.target
